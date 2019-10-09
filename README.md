@@ -11,11 +11,12 @@
 8. Suntype
 9. Freezing
 
-## Basic Classes Required:
+## Basic Classes Required (assume Constructor exists):
 1. Plants (abstract)
     - HP
     - XP defining size
     - Attack_value
+    - SunPower
     - Position
     - Wait_time
     - Range
@@ -31,10 +32,21 @@
     - implements Freezing?
     - implements DayTime/NightTime/both?
     - implements Plantable?
+    - implements SunType?
     - (Image) plantAppearance
     - Projectile (if Attacking)
     - Plant() method (partial overriding)
-3. Zombies (abstract)
+3. Sun
+    - sunAmount
+    - timeAvailable
+    - Image sunAppearance
+    - fall(row,column) method
+    - appear(row,column) method
+4. Lawnmower
+    - Row
+    - (Image) lmAppearance
+    - killAll() method
+5. Zombies (abstract)
     - implements Attacking
     - Attack_value
     - Position
@@ -42,20 +54,37 @@
     - Attack() method
     - Move() method
     - isAttacked() method
-4. Zombie Type
+6. Zombie Type
     - HP
     - implements Clonable?
     - (Image) zombieAppearance
-5. Tile
-6. Tile Type
+7. Tile
+    - rowPos
+    - columnPos
+8. Tile Type
     - implements Plantable?
     - (image) tileAppearance
     - Plant object (if Plantable)
     - Plant() method (in Plantable)
-7. Game
-    - Tile[][] Play Area
-    - Plants[][] toPlantOnTile
-    - Zombies[] to come
+9. User
+    - MoneyEarned
+    - Levels Played
+    - User Name
+    - Plants Catalog
+    - Zombie Catalog
+    - chooseLevel() method
+    - playLevel() method
+    - buyPlant() method
+10. Level
+    - Tile[][] PlayArea
+    - Plants[][] Planted
+    - Zombies[] distribution
+    - Lawnmowers[] available
+11. Game
+    - User[] List
+    - User inUse
     - Inner Class Sidebar
     - Inner Class Zombies left progress bar
     - playGame() method
+    - levelWon() method
+    - levelLost() method
