@@ -36,10 +36,7 @@ public class WelcomeScreenController implements Initializable {
                         Stage stage= new Stage();
                         stage.setTitle("Plants VS Zombies");
                         stage.setScene(new Scene(root, 640, 379));
-                        // rootWelcomeScreenPane.getScene().getWindow().hide();
-                        Game.getRoot().getScene().getWindow().hide();
-                        Game.setRoot(root);
-                        stage.show();
+                        Game.inNewWindow(root, stage);
                     }
                 });
             }

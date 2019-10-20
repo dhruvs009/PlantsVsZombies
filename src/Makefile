@@ -1,7 +1,10 @@
 JFLAGS = --module-path /usr/share/openjfx/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web
 JC = javac
 JR = java
-default: StartPageController.class WelcomeScreenController.class Game.class
+default: PlayGamePageController.class StartPageController.class WelcomeScreenController.class Game.class
+
+PlayGamePageController.class: PlayGamePageController.java
+	@$(JC) $(JFLAGS) PlayGamePageController.java
 
 StartPageController.class: StartPageController.java
 	@$(JC) $(JFLAGS) StartPageController.java

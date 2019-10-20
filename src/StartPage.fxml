@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
@@ -20,6 +21,9 @@
                <font>
                   <Font name="Ubuntu" size="26.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </StackPane>
@@ -29,6 +33,9 @@
                <font>
                   <Font name="Ubuntu" size="26.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </StackPane>
@@ -38,6 +45,9 @@
                <font>
                   <Font name="Ubuntu" size="26.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </StackPane>

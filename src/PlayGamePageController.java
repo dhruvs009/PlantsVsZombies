@@ -10,18 +10,16 @@ import java.io.*;
 import javafx.application.*;
 import javafx.event.*;
 
-public class StartPageController {
+public class PlayGamePageController {
     @FXML
-    private static Pane rootStartPagePane;
+    private static Pane rootPlayGamePagePane;
     @FXML
     private static StackPane topPane;
     @FXML
-    private static StackPane middlePane;
-    @FXML
     private static StackPane bottomPane;
     @FXML
-    private void handleStartGame(ActionEvent event){
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("PlayGamePage.fxml"));
+    private void handleBackButton(ActionEvent event){
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("StartPage.fxml"));
         Parent root=null;
         try{
             root=loader.load();
@@ -33,11 +31,7 @@ public class StartPageController {
         Game.updateStage(root,640,379);
     }
     @FXML
-    private void handleLoadGame(ActionEvent event){
-        System.exit(0);
-    }
-    @FXML
-    private void handleExitGame(ActionEvent event){
+    private void handleChooseLevelButton(ActionEvent event){
         System.exit(0);
     }
 }

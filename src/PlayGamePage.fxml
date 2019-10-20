@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="rootPlayGamePagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlayGamePageController">
+   <children>
+      <ImageView fitHeight="379.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/welcomeposter.jpeg" />
+         </image>
+      </ImageView>
+      <StackPane fx:id="topPane" opacity="0.8" prefHeight="254.0" prefWidth="640.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleChooseLevelButton" text="Choose Level" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Ubuntu" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </StackPane>
+      <StackPane fx:id="bottomPane" layoutY="254.0" opacity="0.8" prefHeight="126.0" prefWidth="640.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleBackButton" text="&lt;---" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" StackPane.alignment="BOTTOM_LEFT">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </StackPane>
+   </children>
+</Pane>
