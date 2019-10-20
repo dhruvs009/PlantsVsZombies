@@ -20,6 +20,14 @@ public class StartPageController implements Initializable {
     @FXML
     private static StackPane bottomPane;
     @FXML
+    private void handleStartGame(ActionEvent event){
+        System.exit(0);
+    }
+    @FXML
+    private void handleLoadGame(ActionEvent event){
+        System.exit(0);
+    }
+    @FXML
     private void handleExitGame(ActionEvent event){
         System.exit(0);
     }
