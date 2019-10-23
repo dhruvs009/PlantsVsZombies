@@ -10,7 +10,7 @@ import java.io.*;
 import javafx.application.*;
 import javafx.event.*;
 
-public class PlayGamePageController {
+public class ChooseLevelController{
     @FXML
     private static Pane rootPlayGamePagePane;
     @FXML
@@ -19,7 +19,7 @@ public class PlayGamePageController {
     private static StackPane bottomPane;
     @FXML
     private void handleBackButton(ActionEvent event){
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("StartPage.fxml"));
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("PlayGamePage.fxml"));
         Parent root=null;
         try{
             root=loader.load();
@@ -32,15 +32,6 @@ public class PlayGamePageController {
     }
     @FXML
     private void handleChooseLevelButton(ActionEvent event){
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("ChooseLevelPage.fxml"));
-        Parent root=null;
-        try{
-            root=loader.load();
-        }
-        catch(IOException e){
-            e.printStackTrace();
-            System.exit(0);
-        }
-        Game.updateStage(root,640,379);
+        System.exit(0);
     }
 }
