@@ -3,7 +3,7 @@ public class NormalZombie extends Zombies {
         super(100,3,3,2, zombieAppearance);
     }
     @Override
-    public Zombies appearAtRow(int row){
+    public Zombies appear(){
         return this;
     }
 }

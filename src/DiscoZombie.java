@@ -3,7 +3,7 @@ public class DiscoZombie extends Zombies{       //implements clonable
         super(120,5,3,2, zombieAppearance);
     }
     @Override
-    public Zombies appearAtRow(int row){
+    public Zombies appear(){
         return this;
     }
 }
