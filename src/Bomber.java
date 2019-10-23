@@ -1,9 +1,10 @@
-public class Bomber extends Plants{
+public abstract class Bomber extends Plants implements Attacking{
     protected int radius;
-    public int attack(){
-
+    Bomber(int HP, int sunPower,int waitForNew, Image plantAppearance){
+        super(HP, sunPower, waitForNew, plantAppearance);
     }
     @Override
-    public Plants plantThis(){
+    public int attack(){
     }
+    public abstract Plants plantThis();
 }

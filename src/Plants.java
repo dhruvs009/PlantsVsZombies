@@ -11,7 +11,7 @@ public abstract class Plants extends Living{
     protected abstract Plants plantThis();
 }
 /* waitForNew
- 7 for slow
- 10 for very slow
- 3 for fast
+ 30 for slow
+ 50 for very slow
+ 7.5 for fast
  */
