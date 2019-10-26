@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen2controller">
+   <children>
+      <StackPane prefHeight="379.0" prefWidth="640.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="379.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@public/img.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+               <image>
+                  <Image url="@public/1513860-2-generations-gaming-plants-v-zombies-png-672_356_preview.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </StackPane.margin>
+            </ImageView>
+            <Text fill="WHITE" fontSmoothingType="LCD" onMouseClicked="#arcadeMode" strokeType="OUTSIDE" strokeWidth="0.0" text="Arcade&#10;Mode" textAlignment="CENTER" wrappingWidth="118.95800018310547" StackPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="Ubuntu Condensed" size="40.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets right="100.0" top="100.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="425.0" layoutY="240.0" onMouseClicked="#storyMode" strokeType="OUTSIDE" strokeWidth="0.0" text="Story&#10;Mode" textAlignment="CENTER" wrappingWidth="98.95800018310547" StackPane.alignment="CENTER_LEFT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Condensed" size="40.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="100.0" top="100.0" />
+               </StackPane.margin>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="110.0" layoutY="240.0" onMouseClicked="#goBack" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;-- Go back" textAlignment="CENTER" wrappingWidth="103.95800018310547" StackPane.alignment="BOTTOM_LEFT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Condensed" size="25.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+</Pane>

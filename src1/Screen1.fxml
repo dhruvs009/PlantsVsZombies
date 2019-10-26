@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen1controller">
+   <children>
+      <StackPane prefHeight="379.0" prefWidth="640.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="379.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@public/img.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+               <image>
+                  <Image url="@public/1513860-2-generations-gaming-plants-v-zombies-png-672_356_preview.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </StackPane.margin>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="162.0" onMouseClicked="#adventure" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
+               <StackPane.margin>
+                  <Insets left="100.0" top="50.0" />
+               </StackPane.margin>
+               <image>
+                  <Image url="@public/adventure-awaits.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" fontSmoothingType="LCD" onMouseClicked="#quit" strokeType="OUTSIDE" strokeWidth="0.0" text="  Quit" wrappingWidth="109.95800018310547" StackPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="Ubuntu Condensed" size="46.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets right="150.0" top="50.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+</Pane>
