@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Screen1controller">
+   <children>
+      <StackPane prefHeight="379.0" prefWidth="640.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="379.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@public/pvz2-ea-hero-pvz2-xl.jpg.adapt.crop191x100.1200w.jpg" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#adventure" styleClass="button3" stylesheets="@stylesheet.css" text="Adventure Time">
+               <StackPane.margin>
+                  <Insets bottom="100.0" />
+               </StackPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#quit" text="Quit" />
+         </children>
+      </StackPane>
+   </children>
+</Pane>

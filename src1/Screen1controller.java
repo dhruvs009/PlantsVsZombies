@@ -13,7 +13,7 @@ import javafx.event.*;
 
 public class Screen1controller {
     @FXML
-    private void adventure(MouseEvent event){
+    private void adventure(ActionEvent event){
         FXMLLoader loader= new FXMLLoader(getClass().getResource("Screen2.fxml"));
         Parent root=null;
         try{
@@ -26,7 +26,7 @@ public class Screen1controller {
         Game.updateStage(root,640,379);
     }
     @FXML
-    private void quit(MouseEvent event){
+    private void quit(ActionEvent event){
         System.exit(0);
     }
 }

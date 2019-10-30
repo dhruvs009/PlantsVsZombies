@@ -1,0 +1,20 @@
+.button {
+    -fx-background-radius: 24;
+    -fx-background-color: white; /* Green */
+    -fx-border-radius: 20;
+    -fx-padding: 16px 32px;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-font-size: 20px;
+    -fx-cursor: pointer;
+  }
+.button:hover {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#f7e2bf, #e4bd79),
+        linear-gradient(#9b8a6c, #97733a),
+        linear-gradient(#776141, #614519);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 5 );
+}
