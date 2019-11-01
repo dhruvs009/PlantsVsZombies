@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true">
+         <image>
+            <Image url="@../PlantsvsZombies/bgd2.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="238.0" fitWidth="1200.0" layoutY="512.0" pickOnBounds="true">
+         <image>
+            <Image url="@PlantsVsZombies/src/public/ground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="207.0" fitWidth="190.0" layoutX="373.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Downloads/resume.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="198.0" fitWidth="183.0" layoutX="648.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Downloads/settings(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="198.0" fitWidth="176.0" layoutX="68.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Downloads/play.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="198.0" fitWidth="158.0" layoutX="1016.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Downloads/exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="281.0" fitWidth="476.0" layoutX="383.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PlantsVsZombies/src/public/pvzlogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

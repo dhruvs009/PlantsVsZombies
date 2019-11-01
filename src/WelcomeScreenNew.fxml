@@ -18,22 +18,22 @@
       </ImageView>
       <ImageView fitHeight="207.0" fitWidth="190.0" layoutX="373.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Downloads/Resumestone.png" />
+            <Image url="@../Downloads/resume.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="198.0" fitWidth="183.0" layoutX="648.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Downloads/settingsstone.png" />
+            <Image url="@../Downloads/settings(3).png" />
          </image>
       </ImageView>
       <ImageView fitHeight="198.0" fitWidth="176.0" layoutX="68.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Downloads/playstone.png" />
+            <Image url="@../Downloads/play.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="198.0" fitWidth="158.0" layoutX="1016.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Downloads/ExitStone.png" />
+            <Image url="@../Downloads/exit.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="281.0" fitWidth="476.0" layoutX="383.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
