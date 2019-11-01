@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="607.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../PlantsvsZombies/bgd2.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="362.0" fitWidth="200.0" layoutX="365.0" layoutY="-28.0" pickOnBounds="true">
+         <image>
+            <Image url="@../src/public/wood2.png" />
+         </image>
+      </ImageView>
+      <Text fill="#2f1c09" layoutX="392.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NEW GAME" wrappingWidth="172.7294921875">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="#2f1c09" layoutX="412.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESUME">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="436.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXIT">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
