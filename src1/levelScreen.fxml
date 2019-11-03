@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
@@ -7,20 +8,102 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="levelScreenController">
    <children>
-      <ImageView fitHeight="379.0" fitWidth="553.0" layoutX="87.0" pickOnBounds="true">
+      <ImageView fitHeight="616.0" fitWidth="1750.0" layoutX="174.0" layoutY="104.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../PlantsvsZombies/level.png" />
+            <Image url="@public/Luck_O'_The_Zombie_Lawn.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.1" contrast="0.3" saturation="-0.2" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="234.0" pickOnBounds="true">
+         <image>
+            <Image url="@public/sidebar.png" />
+         </image>
+         <effect>
+            <Glow level="1.0">
+               <input>
+                  <Glow />
+               </input>
+            </Glow>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="106.0" fitWidth="1320.0" layoutX="-20.0" pickOnBounds="true">
+         <image>
+            <Image url="@public/topbar.png" />
+         </image>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </ImageView>
+      <VBox fx:id="sideBar" layoutX="28.0" layoutY="120.0" prefHeight="600.0" prefWidth="180.0" spacing="20.0" />
+      <GridPane fx:id="tileGrid" layoutX="420.0" layoutY="190.0" prefHeight="460.0" prefWidth="900.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.18" minWidth="80.18" prefWidth="80.18" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="514.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/Sun.png" />
          </image>
       </ImageView>
-      <StackPane prefHeight="379.0" prefWidth="65.0" />
-      <ListView layoutX="1.0" prefHeight="379.0" prefWidth="86.0" style="-fx-background-color: #732313;">
+      <ImageView fitHeight="95.0" fitWidth="186.0" layoutX="620.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/sunCounter.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="641.0" layoutY="10.0" prefHeight="88.0" prefWidth="144.0" text="125" textAlignment="CENTER" textFill="#171717">
+         <font>
+            <Font name="Ani" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="shovel" fitHeight="102.0" fitWidth="120.0" layoutX="308.0" layoutY="2.0" pickOnBounds="true">
+         <image>
+            <Image url="@public/Shovel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="95.0" fitWidth="186.0" layoutX="28.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/sunCounter.png" />
+         </image>
          <effect>
-            <ColorAdjust />
+            <ColorAdjust brightness="-1.0" />
          </effect>
-      </ListView>
-      <Button layoutX="569.0" layoutY="353.0" mnemonicParsing="false" style="-fx-background-color: #732313;" text="MENU" textFill="#e8e2e2" />
+      </ImageView>
+      <Label fx:id="timeCounter" layoutX="49.0" layoutY="10.0" prefHeight="88.0" prefWidth="144.0" text="00:00" textFill="RED">
+         <font>
+            <Font name="Ani" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="68.0" fitWidth="180.0" layoutX="1022.0" layoutY="650.0" onMouseClicked="#MenuMouseClick" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/Menu.png" />
+         </image>
+      </ImageView>
+      <ProgressBar layoutX="907.0" layoutY="44.0" prefHeight="20.0" prefWidth="284.0" progress="0.0" />
+      <ImageView fitHeight="68.0" fitWidth="63.0" layoutX="1128.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/zombieHead.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

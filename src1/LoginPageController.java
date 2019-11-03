@@ -29,6 +29,8 @@ public class LoginPageController{
     //     Game.updateStage(root,640,379);
     // }
     @FXML
+    public static Stage userNameStage;
+    @FXML
     private void mouseEntered(MouseEvent e){
         ImageView button= (ImageView) e.getSource();
         button.setEffect(new Glow(0.3));
@@ -39,20 +41,9 @@ public class LoginPageController{
         button.setEffect(null);
     }
     @FXML
-    private void playMouseClicked(MouseEvent e){
-        // Stage s;
-        // s=new Stage();
-        // FXMLLoader loader= new FXMLLoader(getClass().getResource("Enterusername.fxml"));
-        // Parent root=null;
-        // try{
-        //     root=loader.load();
-        // }
-        // catch(IOException e1){
-        //     e1.printStackTrace();
-        //     System.exit(0);
-        // }
-        // s.setScene(new Scene(root,300,200));
-         FXMLLoader loader= new FXMLLoader(getClass().getResource("screen.fxml"));
+    private void newUserMouseClicked(MouseEvent e){
+        userNameStage=new Stage();
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("Enterusername.fxml"));
         Parent root=null;
         try{
             root=loader.load();
@@ -61,6 +52,28 @@ public class LoginPageController{
             e1.printStackTrace();
             System.exit(0);
         }
-        Game.updateStage(root,1280,720);
+        userNameStage.setScene(new Scene(root,300,200));
+        userNameStage.initStyle(StageStyle.UNDECORATED);
+        userNameStage.show();
+    }
+    @FXML
+    private void existingUserMouseClicked(MouseEvent e){
+        userNameStage=new Stage();
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("Enterusername.fxml"));
+        Parent root=null;
+        try{
+            root=loader.load();
+        }
+        catch(IOException e1){
+            e1.printStackTrace();
+            System.exit(0);
+        }
+        userNameStage.setScene(new Scene(root,300,200));
+        userNameStage.initStyle(StageStyle.UNDECORATED);
+        userNameStage.show();
+    }
+    @FXML
+    private void exitMouseClicked(MouseEvent e){
+        System.exit(0);
     }
 }

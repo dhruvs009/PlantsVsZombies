@@ -1,7 +1,16 @@
 JFLAGS = --module-path /usr/share/openjfx/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web
 JC = javac
 JR = java
-default: UsernamePageController.class LoginPageController.class EntryScreenController.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
+default: InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
+
+InGameMenuController.class: InGameMenuController.java
+	@$(JC) $(JFLAGS) InGameMenuController.java
+
+levelScreenController.class: levelScreenController.java
+	@$(JC) $(JFLAGS) levelScreenController.java
+
+EntryScreenControllerExisting.class: EntryScreenControllerExisting.java
+	@$(JC) $(JFLAGS) EntryScreenControllerExisting.java
 
 UsernamePageController.class: UsernamePageController.java
 	@$(JC) $(JFLAGS) UsernamePageController.java
@@ -9,8 +18,8 @@ UsernamePageController.class: UsernamePageController.java
 LoginPageController.class: LoginPageController.java
 	@$(JC) $(JFLAGS) LoginPageController.java
 
-EntryScreenController.class: EntryScreenController.java
-	@$(JC) $(JFLAGS) EntryScreenController.java
+EntryScreenControllerNew.class: EntryScreenControllerNew.java
+	@$(JC) $(JFLAGS) EntryScreenControllerNew.java
 
 Screen3controller.class: Screen3controller.java
 	@$(JC) $(JFLAGS) Screen3controller.java

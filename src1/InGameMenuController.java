@@ -15,21 +15,15 @@ import javafx.event.*;
 import javafx.scene.image.ImageView;
 import javafx.animation.*;
 
-public class UsernamePageController{
+public class InGameMenuController {
     @FXML
-    private void mouseEntered(MouseEvent e){
-        ImageView button= (ImageView) e.getSource();
-        button.setEffect(new Glow(0.3));
+    private void ResumeMouseClicked(MouseEvent e){
+        levelScreenController.inGameMenu.close();
     }
     @FXML
-    private void mouseExited(MouseEvent e){
-        ImageView button= (ImageView) e.getSource();
-        button.setEffect(null);
-    }
-    @FXML
-    private void OKmouseClicked(MouseEvent e){
-        LoginPageController.userNameStage.close();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("NewUserMainScreen.fxml"));
+    private void exitMouseClicked(MouseEvent e){
+        levelScreenController.inGameMenu.close();        
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("screen.fxml"));
         Parent root=null;
         try{
             root=loader.load();
@@ -39,5 +33,15 @@ public class UsernamePageController{
             System.exit(0);
         }
         Game.updateStage(root,1280,720);
+    }
+    @FXML
+    private void mouseEntered(MouseEvent e){
+        ImageView button= (ImageView) e.getSource();
+        button.setEffect(new Glow(0.3));
+    }
+    @FXML
+    private void mouseExited(MouseEvent e){
+        ImageView button= (ImageView) e.getSource();
+        button.setEffect(null);
     }
 }
