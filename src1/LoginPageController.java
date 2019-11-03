@@ -7,6 +7,7 @@ import javafx.scene.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.effect.*;
+import javafx.scene.control.*;
 import javafx.stage.*;
 import java.io.*;
 import javafx.application.*;
@@ -14,20 +15,19 @@ import javafx.event.*;
 import javafx.scene.image.ImageView;
 import javafx.animation.*;
 
-public class EntryScreenController {
-    // @FXML
-    private void adventure(ActionEvent event){
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("screen.fxml"));
-        Parent root=null;
-        try{
-            root=loader.load();
-        }
-        catch(IOException e){
-            e.printStackTrace();
-            System.exit(0);
-        }
-        Game.updateStage(root,640,379);
-    }
+public class LoginPageController{
+    // private void adventure(ActionEvent event){
+    //     FXMLLoader loader= new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
+    //     Parent root=null;
+    //     try{
+    //         root=loader.load();
+    //     }
+    //     catch(IOException e){
+    //         e.printStackTrace();
+    //         System.exit(0);
+    //     }
+    //     Game.updateStage(root,640,379);
+    // }
     @FXML
     private void mouseEntered(MouseEvent e){
         ImageView button= (ImageView) e.getSource();
@@ -39,13 +39,20 @@ public class EntryScreenController {
         button.setEffect(null);
     }
     @FXML
-    private void exitMouseClicked(MouseEvent e){
-        //ImageView button = (ImageView) e.getSource();
-        System.exit(0);
-    }
-    @FXML
     private void playMouseClicked(MouseEvent e){
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("chooseLevel.fxml"));
+        // Stage s;
+        // s=new Stage();
+        // FXMLLoader loader= new FXMLLoader(getClass().getResource("Enterusername.fxml"));
+        // Parent root=null;
+        // try{
+        //     root=loader.load();
+        // }
+        // catch(IOException e1){
+        //     e1.printStackTrace();
+        //     System.exit(0);
+        // }
+        // s.setScene(new Scene(root,300,200));
+         FXMLLoader loader= new FXMLLoader(getClass().getResource("screen.fxml"));
         Parent root=null;
         try{
             root=loader.load();
@@ -56,11 +63,4 @@ public class EntryScreenController {
         }
         Game.updateStage(root,1280,720);
     }
-    // @FXML
-    // private void quit(ActionEvent event){
-    //     System.exit(0);
-    // }
-    // private void handle(MouseEvent event){
-
-    // }
 }

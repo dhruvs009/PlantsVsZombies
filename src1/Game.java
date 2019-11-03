@@ -37,12 +37,12 @@ public class Game extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
         // Parent root=loader.load();
         Game.root=loader.load();
         stage.setTitle("Plants VS Zombies");
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(new Scene(Game.root, 640, 379));
+        // stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(new Scene(Game.root, 1280, 720));
         stage.show();
         Game.stage=stage;
     }

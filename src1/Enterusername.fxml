@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UsernamePageController">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true">
+         <image>
+            <Image url="@public/loginbgd.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="5.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Roboto;" text="Enter Username" textAlignment="CENTER" wrappingWidth="293.7294921875">
+         <font>
+            <Font name="Lucida Bright Regular" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="56.0" fitWidth="66.0" layoutX="116.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@public/okaybutton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="175.0" layoutX="63.0" layoutY="65.0" pickOnBounds="true">
+         <image>
+            <Image url="@public/buttons.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="66.0" layoutY="86.0" onInputMethodTextChanged="#TextInput" style="-fx-background-color: #9398a5;" />
+   </children>
+</Pane>
