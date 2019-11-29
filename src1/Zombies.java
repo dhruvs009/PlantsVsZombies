@@ -38,9 +38,6 @@ public abstract class Zombies extends Living implements Attacking{
     }
     public void setImage(){
         Random x= new Random();
-        if(zombieAppearance==null){
-            System.out.println("HIIIIII");
-        }
         int j= x.nextInt(5);
         zombie=new ImageView();
         zombie.setImage(zombieAppearance);

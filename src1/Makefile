@@ -1,10 +1,37 @@
 JFLAGS = --module-path /usr/share/openjfx/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web
 JC = javac
 JR = java
-default:Living.class Zombies.class NormalZombie.class Sun.class InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
+default:Living.class Plants.class Shooter.class Blocker.class Bomber.class SunProvider.class SunFlower.class CherryBlaster.class PeaShooter.class Wallnut.class Zombies.class NormalZombie.class Sun.class InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
 
 Sun.class: Sun.java
 	@$(JC) $(JFLAGS) Sun.java
+
+Plants.class: Plants.java
+	@$(JC) $(JFLAGS) Plants.java
+
+Shooter.class: Shooter.java
+	@$(JC) $(JFLAGS) Shooter.java
+
+Blocker.class: Blocker.java
+	@$(JC) $(JFLAGS) Blocker.java
+
+Bomber.class: Bomber.java
+	@$(JC) $(JFLAGS) Bomber.java
+
+SunProvider.class: SunProvider.java
+	@$(JC) $(JFLAGS) SunProvider.java
+
+SunFlower.class: SunFlower.java
+	@$(JC) $(JFLAGS) SunFlower.java
+
+CherryBlaster.class: CherryBlaster.java
+	@$(JC) $(JFLAGS) CherryBlaster.java
+
+PeaShooter.class: PeaShooter.java
+	@$(JC) $(JFLAGS) PeaShooter.java
+
+Wallnut.class: Wallnut.java
+	@$(JC) $(JFLAGS) Wallnut.java
 
 NormalZombie.class : NormalZombie.java
 	@$(JC) $(JFLAGS) NormalZombie.java

@@ -136,12 +136,21 @@ public class levelScreenController implements Initializable {
                     container.getChildren().addAll(x);
                 }
                 container.setOnMousePressed((MouseEvent e1) ->{
+                    Plants x;
                     if(chosenPlant!=null && chosenPlant.compareTo("")!=0 && chosenPlant.compareTo("shovel")!=0 && container.getChildren().size()==0 && GridPane.getColumnIndex(container)%10!=0){
-                        ImageView x= new ImageView();
-                        x.setImage(new Image(getClass().getResourceAsStream(String.format("./public/%s.gif",chosenPlant))));
-                        x.setFitWidth(76.18);
-                        x.setFitHeight(88);
-                        container.getChildren().addAll(x);
+                        if(chosenPlant.compareTo("PeaShooter")==0){
+                            x=new PeaShooter(chosenPlant);
+                        }
+                        else if(chosenPlant.compareTo("SunFlower")==0){
+                            x=new SunFlower(chosenPlant);
+                        }
+                        else if(chosenPlant.compareTo("Wallnut")==0){
+                            x=new Wallnut(chosenPlant);
+                        }
+                        else{
+                            x=new CherryBlaster(chosenPlant);
+                        }
+                        container.getChildren().addAll(x.getPlant());
                     }
                     else if(chosenPlant!=null && chosenPlant.compareTo("shovel")==0){
                         if(GridPane.getColumnIndex(container)%10!=0){
