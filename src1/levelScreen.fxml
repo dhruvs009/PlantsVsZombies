@@ -71,7 +71,7 @@
             <Image url="@public/sunCounter.png" />
          </image>
       </ImageView>
-      <Label layoutX="641.0" layoutY="10.0" prefHeight="88.0" prefWidth="144.0" text="125" textAlignment="CENTER" textFill="#171717">
+      <Label fx:id="sunCounter" layoutX="641.0" layoutY="10.0" prefHeight="88.0" prefWidth="144.0" text="125" textAlignment="CENTER" textFill="#171717">
          <font>
             <Font name="Ani" size="50.0" />
          </font>

@@ -24,7 +24,7 @@ import javafx.animation.Transition.*;
 public class Sun{
     private static Image sunImage;
     private ImageView sun; 
-    private int toAddSun;
+    private static int toAddSun;
     final private ScaleTransition sunTransition;
     public Sun(){
         if(Sun.sunImage==null){
@@ -42,8 +42,14 @@ public class Sun{
         sunTransition.setCycleCount(1);
         this.toAddSun=25;
     }
+    public static int getToAdd(){
+        return toAddSun;
+    }
     public void playTransition(){
         sunTransition.play();
+    }
+    public static Image getImage(){
+        return sunImage;
     }
     public ImageView getSun(){
         return sun;
