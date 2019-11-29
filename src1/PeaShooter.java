@@ -22,11 +22,14 @@ import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
 public class PeaShooter extends Shooter{
-    public PeaShooter(String chosenPlant){
-        super(100,50,7,chosenPlant);
+    private static Image appearance=new Image("./public/PeaShooter.gif");
+    public PeaShooter(){
+        super(100,50,7,new ImageView(appearance));
     }
     // public Plants plantThis(){
-
+    public static Image getImage(){
+        return appearance;
+    }
     @Override
     public int attack() {
         // TODO Auto-generated method stub

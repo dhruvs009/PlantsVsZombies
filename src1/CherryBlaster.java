@@ -22,11 +22,14 @@ import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
 public class CherryBlaster extends Bomber{
-    public CherryBlaster(String chosenPlant){
-        super(100,150,50,chosenPlant);
+    private static Image appearance=new Image("./public/CherryBlaster.gif");
+    public CherryBlaster(){
+        super(100,150,50,new ImageView(appearance));
     }
     //public Plants plantThis();
-
+    public static Image getImage(){
+        return appearance;
+    }
     @Override
     public int attack() {
         // TODO Auto-generated method stub

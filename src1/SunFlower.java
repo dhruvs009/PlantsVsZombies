@@ -22,10 +22,11 @@ import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
 public class SunFlower extends SunProvider{
-    public SunFlower(String chosenPlant){
-        super(100,50,7,chosenPlant);
+    private static Image sunAppearance=new Image("./public/SunFlower.gif");
+    public SunFlower(){
+        super(100,50,7,new ImageView(sunAppearance));
     }
-    // public Plants plantThis(){
-        
-    // }
+    public static Image getImage(){
+        return sunAppearance;
+    }
 }

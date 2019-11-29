@@ -22,8 +22,12 @@ import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
 public class Wallnut extends Blocker{
-    public Wallnut(String chosenPlant){
-        super(100,50,30,chosenPlant);
+    private static Image appearance=new Image("./public/Wallnut.gif");
+    public Wallnut(){
+        super(100,50,30,new ImageView(appearance));
+    }
+    public static Image getImage(){
+        return appearance;
     }
     // @Override
     // public Plants plantThis(){

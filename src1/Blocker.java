@@ -22,8 +22,8 @@ import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
 public abstract class Blocker extends Plants{
-    public Blocker(int HP,int sunPower, int waitForNew,String chosenPlant){
-        super(HP, sunPower, waitForNew, chosenPlant);
+    public Blocker(int HP,int sunPower, int waitForNew,ImageView appearance){
+        super(HP, sunPower, waitForNew, appearance);
     }
     // @Override
     // public abstract Plants plantThis();

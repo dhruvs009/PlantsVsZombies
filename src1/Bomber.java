@@ -23,8 +23,8 @@ import javafx.animation.Transition.*;
 
 public abstract class Bomber extends Plants implements Attacking{
     protected int radius;
-    Bomber(int HP, int sunPower,int waitForNew, String chosenPlant){
-        super(HP, sunPower, waitForNew, chosenPlant);
+    Bomber(int HP, int sunPower,int waitForNew, ImageView Appearance){
+        super(HP, sunPower, waitForNew, Appearance);
     }
     // @Override
     // public int attack(){

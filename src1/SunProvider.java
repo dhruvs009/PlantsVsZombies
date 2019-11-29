@@ -23,10 +23,30 @@ import javafx.animation.Transition.*;
 
 public class SunProvider extends Plants{
     protected int toGiveOut;
-    private Sun toShow;
-    SunProvider(int HP, int sunPower,int waitForNew, String chosenPlant){
-        super(HP, sunPower, waitForNew, chosenPlant);
+    private final Timeline growSun;
+    private static Sun toShow;
+    SunProvider(int HP, int sunPower,int waitForNew, ImageView sunAppearance){
+        super(HP, sunPower, waitForNew, sunAppearance);
+        toShow=new Sun(15);
+        growSun=Sun.getSunProviderTimeline(toShow);
+        growSun.playFromStart();
     }
+    public void playTimeline(){
+        if(toShow==null){
+            toShow=new Sun(15);
+        }
+        growSun.playFromStart();
+    }
+    public static ImageView getSun(){
+        if(toShow==null){
+            toShow=new Sun(15);
+        }
+        return toShow.getSun(); 
+    }
+    // @Override
+    // public void action(){
+
+    // }
     //public abstract Plants plantThis();
     // public Sun giveSun(){
 

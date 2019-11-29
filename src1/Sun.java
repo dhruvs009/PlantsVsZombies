@@ -26,7 +26,34 @@ public class Sun{
     private ImageView sun; 
     private static int toAddSun;
     final private ScaleTransition sunTransition;
-    public Sun(){
+    private static Sun sunProviderSun=new Sun(15);
+    public static Sun getSunProviderSun(){
+        return sunProviderSun;
+    }
+    public static Timeline getSunProviderTimeline(Sun sun){
+        Timeline sunProviderTimeline=new Timeline(
+            new KeyFrame(
+                Duration.millis(0),
+                new KeyValue(sun.getSun().scaleXProperty(),0),
+                new KeyValue(sun.getSun().scaleYProperty(),0)
+            ),
+            new KeyFrame(
+                Duration.millis(5000),
+                new KeyValue(sun.getSun().scaleXProperty(),0),
+                new KeyValue(sun.getSun().scaleYProperty(),0)
+            ),
+            new KeyFrame(
+                Duration.millis(6000),
+                new KeyValue(sun.getSun().scaleXProperty(),0.5),
+                new KeyValue(sun.getSun().scaleYProperty(),0.5)
+            )    
+        );
+        return sunProviderTimeline;
+    }
+    // public static void playSunProviderTimeline(){
+    //     sunProviderTimeline.playFromStart();
+    // }
+    public Sun(int toAddSun){
         if(Sun.sunImage==null){
             Sun.sunImage=new Image(getClass().getResourceAsStream("./public/Sun.png"));
         }
@@ -40,7 +67,7 @@ public class Sun{
         sunTransition.setFromY(0);
         sunTransition.setByY(1f);
         sunTransition.setCycleCount(1);
-        this.toAddSun=25;
+        this.toAddSun=toAddSun;
     }
     public static int getToAdd(){
         return toAddSun;

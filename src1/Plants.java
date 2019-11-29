@@ -26,16 +26,18 @@ public class Plants extends Living{
     protected float waitForNew;
     protected boolean plantable;
     protected ImageView plantAppearance;
-    public Plants(int HP, int sunPower, int waitForNew,String c){
+    
+    public Plants(int HP, int sunPower, int waitForNew,ImageView Appearance){
         super(HP);
         this.sunPower=sunPower;
         this.waitForNew=waitForNew;
-        this.plantAppearance=new ImageView(new Image(getClass().getResourceAsStream(String.format("./public/%s.gif",c))));
+        this.plantAppearance=Appearance;
+        // this.plantAppearance=new ImageView(new Image(getClass().getResourceAsStream(String.format("./public/%s.gif",c))));
         plantAppearance.setFitWidth(76.18);
         plantAppearance.setFitHeight(88);
     }
 
-    //protected abstract Plants plantThis();
+    // protected abstract Plants plantThis();
     public ImageView getPlant(){
         return plantAppearance;
     }

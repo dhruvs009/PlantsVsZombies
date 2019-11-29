@@ -99,7 +99,7 @@ public class levelScreenController implements Initializable {
         Random x= new Random();
         int i= 1+x.nextInt(9);
         int j= x.nextInt(5);
-        Sun toAppear= new Sun();
+        Sun toAppear= new Sun(25);
         for(Node node: tileGrid.getChildren()){
             if(GridPane.getColumnIndex(node)==i && GridPane.getRowIndex(node)==j){
                 StackPane temp= (StackPane) node;
@@ -139,13 +139,25 @@ public class levelScreenController implements Initializable {
                 container.setOnMousePressed((MouseEvent e1) ->{
                     if(container.getChildren().size()>0 && (chosenPlant==null || chosenPlant.compareTo("shovel")!=0)){
                         ImageView temp;
+                        int flag=0;
                         for(int k=0; k<container.getChildren().size(); k++){
                             temp= (ImageView)container.getChildren().get(k);
                             if(temp.getImage()==Sun.getImage()){
                                 container.getChildren().remove(temp);
                                 sunCounterVal+=Sun.getToAdd();
                                 sunCounter.setText(String.format("%d",sunCounterVal));
+                                flag=1;
                                 break;
+                            }
+                        }
+                        if(flag==1){
+                            for(int k=0; k<container.getChildren().size(); k++){
+                                temp=(ImageView)container.getChildren().get(k);
+                                if(temp.getImage()==SunFlower.getImage()){
+                                    Sun toAdd=new Sun(15);
+                                    container.getChildren().addAll(toAdd.getSun());
+                                    Sun.getSunProviderTimeline(toAdd).playFromStart();
+                                }
                             }
                         }
                     }
@@ -158,18 +170,27 @@ public class levelScreenController implements Initializable {
                         Plants x;
                         if(chosenPlant!=null && chosenPlant.compareTo("")!=0 && chosenPlant.compareTo("shovel")!=0 && container.getChildren().size()==0 && GridPane.getColumnIndex(container)%10!=0){
                             if(chosenPlant.compareTo("PeaShooter")==0){
-                                x=new PeaShooter(chosenPlant);
+                                x=new PeaShooter();
+                                container.getChildren().addAll(x.getPlant());
                             }
                             else if(chosenPlant.compareTo("SunFlower")==0){
-                                x=new SunFlower(chosenPlant);
+                                x=new SunFlower();
+                                SunProvider temp= (SunProvider) x;
+                                container.getChildren().addAll(x.getPlant());
+                                temp.getSun().setLayoutX(0);
+                                temp.getSun().setLayoutY(0);
+                                container.getChildren().addAll(temp.getSun());
+                                temp.playTimeline();
                             }
                             else if(chosenPlant.compareTo("Wallnut")==0){
-                                x=new Wallnut(chosenPlant);
+                                x=new Wallnut();
+                                container.getChildren().addAll(x.getPlant());
                             }
                             else{
-                                x=new CherryBlaster(chosenPlant);
+                                x=new CherryBlaster();
+                                container.getChildren().addAll(x.getPlant());
                             }
-                            container.getChildren().addAll(x.getPlant());
+                            // container.getChildren().addAll(x.getPlant());
                         }
                     }
                     else if(chosenPlant!=null && chosenPlant.compareTo("shovel")==0){

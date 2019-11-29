@@ -22,8 +22,8 @@ import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
 public abstract class Shooter extends Plants implements Attacking{
-    public Shooter(int HP, int sunPower, int waitForNew,String chosenPlant){
-        super(HP,sunPower,waitForNew,chosenPlant);
+    public Shooter(int HP, int sunPower, int waitForNew,ImageView appearance){
+        super(HP,sunPower,waitForNew,appearance);
     }
     // private class Projectile implements Attacking{ 
     //     private int damage;
