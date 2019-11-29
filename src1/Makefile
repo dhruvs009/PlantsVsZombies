@@ -1,10 +1,21 @@
 JFLAGS = --module-path /usr/share/openjfx/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web
 JC = javac
 JR = java
-default: Sun.class InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
+default:Living.class Zombies.class NormalZombie.class Sun.class InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
 
 Sun.class: Sun.java
 	@$(JC) $(JFLAGS) Sun.java
+
+NormalZombie.class : NormalZombie.java
+	@$(JC) $(JFLAGS) NormalZombie.java
+
+Zombies.class: Zombies.java
+	@$(JC) $(JFLAGS) Zombies.java
+
+
+Living.class: Living.java
+	@$(JC) $(JFLAGS) Living.java
+
 
 InGameMenuController.class: InGameMenuController.java
 	@$(JC) $(JFLAGS) InGameMenuController.java
