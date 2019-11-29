@@ -101,21 +101,21 @@ public class levelScreenController implements Initializable {
         }
     }
     public void zombieAppear(){
-        Random x= new Random();
-        int j= x.nextInt(5);
-        ImageView zombie= new ImageView();
-        zombie.setImage(new Image(getClass().getResourceAsStream("./public/zombie.gif")));
-        zombie.setFitWidth(84.18);
-        zombie.setFitHeight(96);
-        TranslateTransition tt= new TranslateTransition(Duration.millis(40000), zombie);
-        tt.setByX(-880);
-        tt.setByY(0);
-        tt.setFromX(1210);
-        tt.setFromY(190+92*j);
-        tt.setCycleCount(1);
-        tt.play();
-        zombie.toFront();
-        rootPane.getChildren().addAll(zombie);
+        NormalZombie nz=new NormalZombie();
+        //ImageView zombie= new ImageView();
+        // zombie.setImage(new Image(getClass().getResourceAsStream("./public/zombie.gif")));
+        // zombie.setFitWidth(84.18);
+        // zombie.setFitHeight(96);
+        // TranslateTransition tt= new TranslateTransition(Duration.millis(40000), zombie);
+        // tt.setByX(-880);
+        // tt.setByY(0);
+        // tt.setFromX(1210);
+        // tt.setFromY(190+92*j);
+        // tt.setCycleCount(1);
+        // tt.play();
+        // zombie.toFront();
+        nz.playTransition();
+        rootPane.getChildren().addAll(nz.getZombie());
     }
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -136,12 +136,21 @@ public class levelScreenController implements Initializable {
                     container.getChildren().addAll(x);
                 }
                 container.setOnMousePressed((MouseEvent e1) ->{
+                    Plants x;
                     if(chosenPlant!=null && chosenPlant.compareTo("")!=0 && chosenPlant.compareTo("shovel")!=0 && container.getChildren().size()==0 && GridPane.getColumnIndex(container)%10!=0){
-                        ImageView x= new ImageView();
-                        x.setImage(new Image(getClass().getResourceAsStream(String.format("./public/%s.gif",chosenPlant))));
-                        x.setFitWidth(76.18);
-                        x.setFitHeight(88);
-                        container.getChildren().addAll(x);
+                        if(chosenPlant.compareTo("PeaShooter")==0){
+                            x=new PeaShooter(chosenPlant);
+                        }
+                        else if(chosenPlant.compareTo("SunFlower")==0){
+                            x=new SunFlower(chosenPlant);
+                        }
+                        else if(chosenPlant.compareTo("Wallnut")==0){
+                            x=new Wallnut(chosenPlant);
+                        }
+                        else{
+                            x=new CherryBlaster(chosenPlant);
+                        }
+                        container.getChildren().addAll(x.getPlant());
                     }
                     else if(chosenPlant!=null && chosenPlant.compareTo("shovel")==0){
                         if(GridPane.getColumnIndex(container)%10!=0){
