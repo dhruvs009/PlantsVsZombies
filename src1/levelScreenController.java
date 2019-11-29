@@ -91,21 +91,12 @@ public class levelScreenController implements Initializable {
         Random x= new Random();
         int i= 1+x.nextInt(9);
         int j= x.nextInt(5);
-        ImageView sun= new ImageView();
-        sun.setImage(new Image(getClass().getResourceAsStream("./public/Sun.png")));
-        sun.setFitWidth(76.18);
-        sun.setFitHeight(88);
+        Sun toAppear= new Sun();
         for(Node node: tileGrid.getChildren()){
             if(GridPane.getColumnIndex(node)==i && GridPane.getRowIndex(node)==j){
                 StackPane temp= (StackPane) node;
-                ScaleTransition st=new ScaleTransition(Duration.millis(3000), sun);
-                st.setFromX(0);
-                st.setByX(1f);
-                st.setFromY(0);
-                st.setByY(1f);
-                st.setCycleCount(1);
-                st.play();
-                temp.getChildren().addAll(sun);
+                toAppear.playTransition();
+                temp.getChildren().addAll(toAppear.getSun());
             }
         }
     }
@@ -177,6 +168,8 @@ public class levelScreenController implements Initializable {
         }
         );
         sunThread.start();
+        // Thread sunThread=new Thread(new Sun());
+        // sunThread.start();
         Thread zombieThread= new Thread(() -> {
             try{
                 while(true){
