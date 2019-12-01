@@ -38,12 +38,12 @@ public class Sun{
                 new KeyValue(sun.getSun().scaleYProperty(),0)
             ),
             new KeyFrame(
-                Duration.millis(5000),
+                Duration.millis(4000),
                 new KeyValue(sun.getSun().scaleXProperty(),0),
                 new KeyValue(sun.getSun().scaleYProperty(),0)
             ),
             new KeyFrame(
-                Duration.millis(6000),
+                Duration.millis(5000),
                 new KeyValue(sun.getSun().scaleXProperty(),0.5),
                 new KeyValue(sun.getSun().scaleYProperty(),0.5)
             )    

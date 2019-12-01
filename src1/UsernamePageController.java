@@ -17,6 +17,8 @@ import javafx.animation.*;
 
 public class UsernamePageController{
     @FXML
+    private TextField usernameTextField;
+    @FXML
     private void mouseEntered(MouseEvent e){
         ImageView button= (ImageView) e.getSource();
         button.setEffect(new Glow(0.3));
@@ -28,16 +30,23 @@ public class UsernamePageController{
     }
     @FXML
     private void OKmouseClicked(MouseEvent e){
-        LoginPageController.userNameStage.close();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("NewUserMainScreen.fxml"));
-        Parent root=null;
-        try{
-            root=loader.load();
-        }
-        catch(IOException e1){
-            e1.printStackTrace();
-            System.exit(0);
-        }
-        Game.updateStage(root,1280,720);
+        String Username;
+        Username=usernameTextField.getText();
+        if(!Username.equals("")){
+            User U=new User(Username);
+            Game.createUser(U);
+        //Game.setUsername(Username);
+            LoginPageController.userNameStage.close();
+            FXMLLoader loader= new FXMLLoader(getClass().getResource("screen.fxml"));
+            Parent root=null;
+            try{
+                root=loader.load();
+            }
+            catch(IOException e1){
+                e1.printStackTrace();
+                System.exit(0);
+            }
+            Game.updateStage(root,1280,720);
+        }   
     }
 }

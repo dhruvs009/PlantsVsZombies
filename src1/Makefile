@@ -1,7 +1,31 @@
 JFLAGS = --module-path /usr/share/openjfx/lib --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web
 JC = javac
 JR = java
-default:Living.class Plants.class Shooter.class Blocker.class Bomber.class SunProvider.class SunFlower.class CherryBlaster.class PeaShooter.class Wallnut.class Zombies.class NormalZombie.class Sun.class InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
+default: PlantFactory.class ShroomPea.class PuffShroom.class LawnMower.class GameBase.class Level.class User.class Pea.class Living.class Plants.class Shooter.class Blocker.class Bomber.class SunProvider.class SunFlower.class CherryBlaster.class PeaShooter.class Wallnut.class Zombies.class NormalZombie.class Sun.class ChooseLevelController.class SavedGamesScreenController.class InGameMenuController.class levelScreenController.class EntryScreenControllerExisting.class UsernamePageController.class LoginPageController.class EntryScreenControllerNew.class Screen3controller.class Screen2controller.class Screen1controller.class WelcomeScreenController.class Game.class
+
+PlantFactory.class: PlantFactory.java
+	@$(JC) $(JFLAGS) PlantFactory.java
+
+ShroomPea.class: ShroomPea.java
+	@$(JC) $(JFLAGS) ShroomPea.java
+
+PuffShroom.class: PuffShroom.java
+	@$(JC) $(JFLAGS) PuffShroom.java
+
+LawnMower.class: LawnMower.java
+	@$(JC) $(JFLAGS) LawnMower.java
+
+Level.class: Level.java
+	@$(JC) $(JFLAGS) Level.java
+
+GameBase.class: GameBase.java
+	@$(JC) $(JFLAGS) GameBase.java
+
+User.class: User.java
+	@$(JC) $(JFLAGS) User.java
+
+Pea.class: Pea.java
+	@$(JC) $(JFLAGS) Pea.java
 
 Sun.class: Sun.java
 	@$(JC) $(JFLAGS) Sun.java
@@ -38,6 +62,12 @@ NormalZombie.class : NormalZombie.java
 
 Zombies.class: Zombies.java
 	@$(JC) $(JFLAGS) Zombies.java
+
+SavedGamesScreenController.class: SavedGamesScreenController.java
+	@$(JC) $(JFLAGS) SavedGamesScreenController.java
+
+ChooseLevelController.class: ChooseLevelController.java
+	@$(JC) $(JFLAGS) ChooseLevelController.java
 
 
 Living.class: Living.java

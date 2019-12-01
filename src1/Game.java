@@ -7,11 +7,20 @@ import javafx.animation.*;
 import javafx.util.Duration;
 
 public class Game extends Application {
+    // static GameBase G;
+    public static User U;
     private static Parent root;
-    private static Stage stage;
+    public static Stage stage;
     public static Parent getRoot(){
         return root;
     }
+    static void createUser(User u1){
+        U=u1;
+        // System.out.println(U.getUsername());
+    }
+    // static void setUsername(String username){
+    //     G=new GameBase(username);
+    // }
     public static void setRoot(Parent toSetRoot){
         root=toSetRoot;
     }

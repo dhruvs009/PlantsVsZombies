@@ -40,24 +40,9 @@ public class LoginPageController{
         ImageView button= (ImageView) e.getSource();
         button.setEffect(null);
     }
+
     @FXML
-    private void newUserMouseClicked(MouseEvent e){
-        userNameStage=new Stage();
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("Enterusername.fxml"));
-        Parent root=null;
-        try{
-            root=loader.load();
-        }
-        catch(IOException e1){
-            e1.printStackTrace();
-            System.exit(0);
-        }
-        userNameStage.setScene(new Scene(root,300,200));
-        userNameStage.initStyle(StageStyle.UNDECORATED);
-        userNameStage.show();
-    }
-    @FXML
-    private void existingUserMouseClicked(MouseEvent e){
+    private void loginMouseClicked(MouseEvent e){
         userNameStage=new Stage();
         FXMLLoader loader= new FXMLLoader(getClass().getResource("Enterusername.fxml"));
         Parent root=null;

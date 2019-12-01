@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,17 +16,12 @@
             <Image url="@public/pvzlogin.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="105.0" fitWidth="236.0" layoutX="334.0" layoutY="501.0" onMouseClicked="#newUserMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="103.0" fitWidth="264.0" layoutX="339.0" layoutY="511.0" onMouseClicked="#loginMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@public/newUser.png" />
+            <Image url="@public/loginbutton.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="264.0" layoutX="701.0" layoutY="501.0" onMouseClicked="#existingUserMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@public/existingUser.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="264.0" layoutX="522.0" layoutY="593.0" onMouseClicked="#exitMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="103.0" fitWidth="264.0" layoutX="681.0" layoutY="511.0" onMouseClicked="#exitMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@public/exit2.png" />
          </image>

@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InGameMenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InGameMenuController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
             <Image url="@public/ingameMenubgd.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="25.0" onMouseClicked="#ResumeMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="22.0" onMouseClicked="#ResumeMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@public/resumeGame.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="147.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="200.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@public/SaveGame.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="276.0" onMouseClicked="#exitMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="287.0" onMouseClicked="#exitMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@public/exit2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="175.0" layoutX="217.0" layoutY="123.0" onMouseClicked="#ResumeMouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" pickOnBounds="true">
+         <image>
+            <Image url="@public/restartLevel.png" />
          </image>
       </ImageView>
    </children>

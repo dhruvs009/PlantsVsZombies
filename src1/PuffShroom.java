@@ -21,37 +21,29 @@ import javafx.scene.image.Image;
 import javafx.scene.shape.*;
 import javafx.animation.Transition.*;
 
-public class PeaShooter extends Shooter{
-    private static Image appearance=new Image("./public/PeaShooter.gif");
-    private Pea shootThis;
+public class PuffShroom extends Shooter{
+    private static Image appearance=new Image("./public/PuffShroom.gif");
+    private ShroomPea shootThis;
     private Timeline shootTimeline;
-    public PeaShooter(){
-        super(100,50,7,new ImageView(appearance));
-        shootThis=new Pea();
+    public PuffShroom(){
+        super(75,0,7,new ImageView(appearance));
+        shootThis=new ShroomPea();
     }
-    // public Plants plantThis(){
     public static Image getImage(){
         return appearance;
     }
-
     public ImageView getPea(){
         return shootThis.getPea();
     }
-    // public Timeline getTimeline(){
-    //     return shootThis.getShootTimeline(shootThis);
-    // }
-    // public void playTimeline(){
-    //     shootThis.getShootTimeline(shootThis).playFromStart();
-    // }
     public void initTimeline(Pane pane, double xcoord, double ycoord, Level toPlay, int i, int j){
         int[] tempTranslator={0,0,0,0,0};
         shootTimeline=new Timeline(
             new KeyFrame(
                 Duration.millis(1500),
                 (ev)->{
-                    shootThis=new Pea();
+                    shootThis=new ShroomPea();
                     shootThis.getPea().setLayoutX(xcoord+60);
-                    shootThis.getPea().setLayoutY(ycoord+20);
+                    shootThis.getPea().setLayoutY(ycoord+50);
                     ImageView toUse=getPea();
                     try{
                         int distX=(int)toPlay.zombiesInRow.get(i).get(tempTranslator[i]).getTranslateX();
@@ -64,7 +56,7 @@ public class PeaShooter extends Shooter{
                                 for(int k=0; k<pane.getChildren().size(); k++){
                                     try{
                                         ImageView temp=(ImageView)pane.getChildren().get(k);
-                                        if(temp.getImage()==Pea.getImage()){
+                                        if(temp.getImage()==ShroomPea.getImage()){
                                             pane.getChildren().remove(temp);
                                             break;
                                         }
@@ -104,5 +96,4 @@ public class PeaShooter extends Shooter{
         return 0;
     }
         
-    // }
 }

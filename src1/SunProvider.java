@@ -37,6 +37,9 @@ public class SunProvider extends Plants{
         }
         growSun.playFromStart();
     }
+    public void stopTimeline(){
+        growSun.stop();
+    }
     public static ImageView getSun(){
         if(toShow==null){
             toShow=new Sun(15);

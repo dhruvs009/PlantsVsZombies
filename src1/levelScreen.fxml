@@ -18,7 +18,7 @@
             <ColorAdjust brightness="0.1" contrast="0.3" saturation="-0.2" />
          </effect>
       </ImageView>
-      <ImageView fitHeight="720.0" fitWidth="234.0" pickOnBounds="true">
+      <ImageView fitHeight="720.0" fitWidth="180.0" pickOnBounds="true">
          <image>
             <Image url="@public/sidebar.png" />
          </image>
@@ -100,7 +100,7 @@
          </image>
       </ImageView>
       <ProgressBar layoutX="907.0" layoutY="44.0" prefHeight="20.0" prefWidth="284.0" progress="0.0" />
-      <ImageView fitHeight="68.0" fitWidth="63.0" layoutX="1128.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="progressBar" fitHeight="68.0" fitWidth="63.0" layoutX="1128.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@public/zombieHead.png" />
          </image>

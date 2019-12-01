@@ -38,6 +38,10 @@ public class Plants extends Living{
     }
 
     // protected abstract Plants plantThis();
+    public void setSize(double x, double y){
+        plantAppearance.setFitWidth(x);
+        plantAppearance.setFitHeight(y);
+    }
     public ImageView getPlant(){
         return plantAppearance;
     }

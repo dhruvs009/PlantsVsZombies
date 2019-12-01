@@ -40,6 +40,7 @@ public class EntryScreenControllerExisting {
     }
     @FXML
     private void logoutMouseClicked(MouseEvent e){
+        //serialisation
         FXMLLoader loader= new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
         Parent root=null;
         try{
@@ -53,16 +54,30 @@ public class EntryScreenControllerExisting {
     }
     @FXML
     private void levelMouseClicked(MouseEvent e){
-        // FXMLLoader loader= new FXMLLoader(getClass().getResource("chooseLevel.fxml"));
-        // Parent root=null;
-        // try{
-        //     root=loader.load();
-        // }
-        // catch(IOException e1){
-        //     e1.printStackTrace();
-        //     System.exit(0);
-        // }
-        // Game.updateStage(root,1280,720);
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("chooseLevel.fxml"));
+        Parent root=null;
+        try{
+            root=loader.load();
+        }
+        catch(IOException e1){
+            e1.printStackTrace();
+            System.exit(0);
+        }
+        Game.updateStage(root,1280,720);
+    }
+    @FXML
+    private void ResumeMouseClicked(MouseEvent e){
+        Game.U.setLevel(Game.U.CurrentLeveltoPlay);
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("levelScreen.fxml"));
+        Parent root=null;
+        try{
+            root=loader.load();
+        }
+        catch(IOException e1){
+            e1.printStackTrace();
+            System.exit(0);
+        }
+        Game.updateStage(root,1280,720);
     }
     // @FXML
     // private void quit(ActionEvent event){
