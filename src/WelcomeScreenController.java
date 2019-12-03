@@ -24,7 +24,7 @@ public class WelcomeScreenController implements Initializable {
                 Platform.runLater(new Runnable(){
                     @Override
                     public void run() {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartPage.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Screen1Alt.fxml"));
                         Parent root=null;
                         try{
                             root=loader.load();

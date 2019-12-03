@@ -10,6 +10,9 @@ public class Living{
     protected int getHP(){
         return this.HP;
     }
+    public void setHP(int HP){
+        this.HP=HP;
+    }
     protected void isAttacked(int attackVal){
         this.HP-=attackVal;
     }
