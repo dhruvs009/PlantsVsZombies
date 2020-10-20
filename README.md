@@ -1,4 +1,11 @@
 # Plants VS Zombies
+A clone of the famous game [Plants VS Zombies](https://www.ea.com/ea-studios/popcap/plants-vs-zombies), written in Java, using JavaFX for the User Interface. This was a course project for Advanced Programming during the Monsoon 2019 term at IIIT Delhi.
+
+## Features
+1. Smooth animations using JavaFX keyframes.
+2. 12+ characters inside the game.
+3. Save the game at any point in between the game.
+4. And much more...
 
 ## How to start?
 1. Clone the repo on your desktop.<br>
