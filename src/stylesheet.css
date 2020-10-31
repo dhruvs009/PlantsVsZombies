@@ -18,3 +18,26 @@
     -fx-text-fill: white;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 5 );
 }
+
+div.something div.following {
+  -webkit-animation: randomGen 2s steps(30) infinite;
+          animation: randomGen 2s steps(30) infinite;
+}
+
+@-webkit-keyframes randomGen {
+  100% {
+    -webkit-transform: translateX(-3000%);
+            transform: translateX(-3000%);
+  }
+}
+
+@keyframes randomGen {
+  100% {
+    -webkit-transform: translateX(-3000%);
+            transform: translateX(-3000%);
+  }
+}
+#pause:checked ~ div div {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
